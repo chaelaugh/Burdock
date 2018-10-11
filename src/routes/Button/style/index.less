@@ -1,0 +1,131 @@
+.default {
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  border-color: #d9d9d9;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+.default:focus {
+  outline: none;
+}
+
+.default:after {
+  content: '';
+  display: block;
+  position: absolute;
+  //扩大伪类元素4个方向各10px
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  pointer-events: none;
+  background-color: #16a4ff;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.default:active:after {
+  opacity: 0.3;
+  //设置初始状态
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0s;
+}
+
+.primary {
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  color: #fff;
+  background-color: #16a4ff;
+  border-color: #d9d9d9;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+.primary:focus {
+  outline: none;
+}
+
+.primary:after {
+  content: '';
+  display: block;
+  position: absolute;
+  //扩大伪类元素4个方向各10px
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  pointer-events: none;
+  background-color: #16a4ff;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.primary:active:after {
+  opacity: 0.3;
+  //设置初始状态
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0s;
+}
+
+.danger {
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  color: #fff;
+  background-color: #ff2f3a;
+  border-color: #d9d9d9;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+.danger:focus {
+  outline: none;
+}
+
+.danger:after {
+  content: '';
+  display: block;
+  position: absolute;
+  //扩大伪类元素4个方向各10px
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  pointer-events: none;
+  background-color: #ff2f3a;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.danger:active:after {
+  opacity: 0.3;
+  //设置初始状态
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0s;
+}
