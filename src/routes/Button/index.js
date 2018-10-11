@@ -10,22 +10,24 @@ export default class index extends PureComponent {
   };
 
   componentWillMount() {
-    const { type = 'default' } = this.props;
-    const list = [
-      { type: 'default', color: '#16a4ff' },
-      { type: 'primary', color: '#fff' },
-      { type: 'danger', color: '#fff' },
-    ];
-    let value = '';
-    list.forEach(item => {
-      if (item.type === type) {
-        value = item.color;
-      }
-    });
-    this.setState({
-      type,
-      color: value,
-    });
+    const { type = 'default', disabled } = this.props;
+    if (!disabled) {
+      const list = [
+        { type: 'default', color: '#16a4ff' },
+        { type: 'primary', color: '#fff' },
+        { type: 'danger', color: '#fff' },
+      ];
+      let value = '';
+      list.forEach(item => {
+        if (item.type === type) {
+          value = item.color;
+        }
+      });
+      this.setState({
+        type,
+        color: value,
+      });
+    }
   }
 
   onMouseEnter = () => {
@@ -54,7 +56,7 @@ export default class index extends PureComponent {
 
   render() {
     const { hover, clicked, type, color } = this.state;
-    const { children, size = 'default', style = {} } = this.props;
+    const { children, size = 'default', style = {}, disabled = false } = this.props;
     const sizeList = {
       small: {
         paddingTop: 0,
@@ -74,11 +76,12 @@ export default class index extends PureComponent {
     return (
       <button
         type="button"
-        className={styles[type]}
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        onClick={this.onClick}
-        onBlur={this.onBlur}
+        disabled
+        className={disabled ? styles.disabled : styles[type]}
+        onMouseEnter={disabled ? () => {} : this.onMouseEnter}
+        onMouseLeave={disabled ? () => {} : this.onMouseLeave}
+        onClick={disabled ? () => {} : this.onClick}
+        onBlur={disabled ? () => {} : this.onBlur}
         style={
           hover || clicked
             ? { color, borderColor: color, ...sizeList[size], ...style }

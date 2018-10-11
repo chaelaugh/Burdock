@@ -19,6 +19,7 @@ export default class index extends PureComponent {
         title: 'Type',
         dataIndex: 'type',
         key: 'type',
+        render: text => <span style={{ color: '#d5007e' }}>{text}</span>,
       },
       {
         title: 'Defaults',
@@ -43,10 +44,17 @@ export default class index extends PureComponent {
         defaults: 'default',
       },
       {
+        id: 4,
+        props: 'disabled',
+        description: '是否禁用按钮',
+        type: 'string',
+        defaults: 'false',
+      },
+      {
         id: 3,
         props: 'onClick',
         description: 'click 事件的 handler',
-        type: 'function',
+        type: 'boolean',
         defaults: '-',
       },
     ];
@@ -57,6 +65,9 @@ export default class index extends PureComponent {
           click this
         </Button>
         <Button type="danger" style={{ marginLeft: '1em' }}>
+          click this
+        </Button>
+        <Button type="danger" style={{ marginLeft: '1em' }} disabled>
           click this
         </Button>
         <div>
