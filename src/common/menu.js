@@ -15,6 +15,10 @@ const menuData = [
         path: 'checkbox',
       },
       {
+        name: 'CheckboxTag',
+        path: 'checkboxTag',
+      },
+      {
         name: 'Tag',
         path: 'tag',
       },

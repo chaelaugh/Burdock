@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import Table from '../Table';
 import Header from '../Header';
-import Checkbox from './index';
+import CheckboxTag from './index';
 
 export default class index extends PureComponent {
   render() {
@@ -61,13 +61,8 @@ export default class index extends PureComponent {
     ];
     return (
       <div>
-        <Header>Checkbox 多选框</Header>
-        <Checkbox onChange={(e) => console.log(e)} />
-        <Checkbox defaultChecked onChange={(e) => console.log(e)} />
-        <Checkbox checked onChange={(e) => console.log(e)} />
-        <Checkbox checked={false} onChange={(e) => console.log(e)} />
-        <Checkbox checked onChange={(e) => console.log(e)} disabled />
-        <Checkbox checked={false} onChange={(e) => console.log(e)} disabled />
+        <Header>CheckboxTag 多选标签</Header>
+        <CheckboxTag />
         <div>
           <Table columns={columns} data={data} rowKey="id" title="API" />
         </div>
