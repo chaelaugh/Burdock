@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import Button from './index';
 import Table from '../Table';
 import Header from '../Header';
+import Checkbox from './index';
 
 export default class index extends PureComponent {
   render() {
@@ -61,17 +61,8 @@ export default class index extends PureComponent {
     ];
     return (
       <div>
-        <Header>Button 按钮</Header>
-        <Button>click this</Button>
-        <Button type="primary" style={{ marginLeft: '1em' }}>
-          click this
-        </Button>
-        <Button type="danger" style={{ marginLeft: '1em' }}>
-          click this
-        </Button>
-        <Button type="danger" style={{ marginLeft: '1em' }} disabled>
-          click this
-        </Button>
+        {/*<Header>Checkbox 多选框</Header>*/}
+        <Checkbox onChange={(e) => console.log(e)} />
         <div>
           <Table columns={columns} data={data} rowKey="id" title="API" />
         </div>

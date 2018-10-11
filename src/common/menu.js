@@ -7,8 +7,16 @@ const menuData = [
     path: 'component',
     children: [
       {
-        name: 'button',
+        name: 'Button',
         path: 'button',
+      },
+      {
+        name: 'Checkbox',
+        path: 'checkbox',
+      },
+      {
+        name: 'Tag',
+        path: 'tag',
       },
     ],
   },

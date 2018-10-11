@@ -77,6 +77,12 @@ export const getRouterData = app => {
     '/component/button': {
       component: dynamicWrapper(app, [], () => import('../routes/Button/Button.js')),
     },
+    '/component/checkbox': {
+      component: dynamicWrapper(app, [], () => import('../routes/Checkbox/Checkbox.js')),
+    },
+    '/component/tag': {
+      component: dynamicWrapper(app, [], () => import('../routes/Tag/Tag.js')),
+    },
     '/exception/403': {
       component: dynamicWrapper(app, [], () => import('../routes/Exception/403')),
     },

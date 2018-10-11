@@ -246,7 +246,7 @@ export default class BasicLayout extends React.PureComponent {
               onNoticeVisibleChange={this.handleNoticeVisibleChange}
             />
           </Header>
-          <Content style={{ margin: '24px 24px 0', height: '100%', backgroundColor: 'white' }}>
+          <Content style={{ margin: '24px 24px 0', padding: '1em', minHeight: 500, height: '100%', backgroundColor: 'white' }}>
             <Switch>
               {redirectData.map(item => (
                 <Redirect key={item.from} exact from={item.from} to={item.to} />

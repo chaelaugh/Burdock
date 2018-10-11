@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import Button from './index';
 import Table from '../Table';
 import Header from '../Header';
+import Tag from './index';
 
 export default class index extends PureComponent {
   render() {
@@ -32,46 +32,40 @@ export default class index extends PureComponent {
     const data = [
       {
         id: 1,
-        props: 'type',
-        description: '按钮的类型，default，primary，danger',
-        type: 'string',
-        defaults: 'default',
-      },
-      {
-        id: 2,
-        props: 'size',
-        description: '按钮的大小，small，default',
-        type: 'string',
-        defaults: 'default',
-      },
-      {
-        id: 4,
-        props: 'disabled',
-        description: '是否禁用按钮',
+        props: 'closable',
+        description: '标签是否可关闭',
         type: 'boolean',
         defaults: 'false',
       },
       {
+        id: 2,
+        props: 'color',
+        description: '标签颜色',
+        type: 'string',
+        defaults: '#575757',
+      },
+      {
         id: 3,
-        props: 'onClick',
-        description: 'click 事件的 handler',
+        props: 'filling',
+        description: '是否填充标签',
+        type: 'boolean',
+        defaults: 'false',
+      },
+      {
+        id: 4,
+        props: 'onClose',
+        description: '关闭的回调',
         type: 'function',
         defaults: '-',
       },
     ];
     return (
       <div>
-        <Header>Button 按钮</Header>
-        <Button>click this</Button>
-        <Button type="primary" style={{ marginLeft: '1em' }}>
-          click this
-        </Button>
-        <Button type="danger" style={{ marginLeft: '1em' }}>
-          click this
-        </Button>
-        <Button type="danger" style={{ marginLeft: '1em' }} disabled>
-          click this
-        </Button>
+        <Header>Tag 标签</Header>
+        <Tag />
+        <Tag color='#f50' />
+        <Tag closable />
+        <Tag color='#108ee9' closable filling onClose={() => console.log('关闭')} />
         <div>
           <Table columns={columns} data={data} rowKey="id" title="API" />
         </div>

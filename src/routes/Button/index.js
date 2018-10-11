@@ -76,7 +76,7 @@ export default class index extends PureComponent {
     return (
       <button
         type="button"
-        disabled
+        disabled={disabled}
         className={disabled ? styles.disabled : styles[type]}
         onMouseEnter={disabled ? () => {} : this.onMouseEnter}
         onMouseLeave={disabled ? () => {} : this.onMouseLeave}
