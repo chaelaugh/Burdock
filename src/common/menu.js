@@ -19,6 +19,10 @@ const menuData = [
         path: 'checkboxTag',
       },
       {
+        name: 'Radio',
+        path: 'radio',
+      },
+      {
         name: 'Tag',
         path: 'tag',
       },

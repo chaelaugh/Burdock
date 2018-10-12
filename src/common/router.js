@@ -83,6 +83,9 @@ export const getRouterData = app => {
     '/component/checkboxTag': {
       component: dynamicWrapper(app, [], () => import('../routes/CheckboxTag/CheckboxTag.js')),
     },
+    '/component/radio': {
+      component: dynamicWrapper(app, [], () => import('../routes/Radio/Radio.js')),
+    },
     '/component/tag': {
       component: dynamicWrapper(app, [], () => import('../routes/Tag/Tag.js')),
     },
